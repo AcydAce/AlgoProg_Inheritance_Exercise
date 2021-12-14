@@ -46,7 +46,7 @@ class student:
         return super().__str__() + "student : ".format(self.getname()(self.getaddress()))
 
     def displaystudent(self):
-        print(self.name(self.address))
+        print(self.name(self.address), self.getgrade())
 
 
 class teacher:
@@ -72,11 +72,17 @@ class teacher:
     def getcourse(self):
         return self.__course
 
+    def addcourse(self, newcourse):
+        if course > 1:
+            self.__course = course
+        else:
+            self.__course = newcourse
+
     def __str__(self):
         return super().__str__() + "teacher : ".format(self.getname()(self.getaddress()))
 
     def displayteacher(self):
-        print(self.name(self.address))
+        print(self.name(self.address), self.getcourse())
 
 
 student().setname("me")
