@@ -1,5 +1,5 @@
 class person:
-    def __init__(self, name="", address=""):
+    def __init__(self, name, address):
         self.__name = name
         self.__address = address
 
@@ -20,24 +20,14 @@ class person:
 
 
 class student:
-    def __init__(self, name="", address="", grade=""):
+    def __init__(self, name, address, grade):
         super().__init__(name, address)
         self.setgrade(grade)
 
-    def setname(self, name):
-        self.name = name
-
-    def getname(self):
-        return self.name
-
-    def setaddress(self, address):
-        self.address = address
-
-    def getaddress(self):
-        return self.address
-
-    def setgrade(self, grade):
+    def setgrade(self, course, grade):
         self.__grade = grade
+        self.courses = []
+        self.grades = []
 
     def getgrade(self):
         return self.__grade
